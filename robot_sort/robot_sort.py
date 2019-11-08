@@ -106,7 +106,6 @@ class SortingRobot:
             self.set_light_off()
             # for x in list
             for i in range(0, len(self._list)):
-                # swap at first position # replace l[0] with none, so you can compare l[0] with next value
                 # if can move right: # account for end of list
                 if self.can_move_right() == True:
                     # swap
