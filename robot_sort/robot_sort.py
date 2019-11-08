@@ -98,16 +98,54 @@ class SortingRobot:
         """
         # Fill this out
 
-        # my plan is to try and implement selection sort or bubble sort using all of the robot methods.
-        # since I can't use loops, I will need to recursively call the sort method once the robot has reached the end of the line
+        # light = on
+        self.set_light_on()
+        # while light == on
+        while self.light_is_on() == True:
+            # light = off
+            self.set_light_off()
+            # for x in list
+            for i in range(0, len(self._list)):
+                # swap at first position # replace l[0] with none, so you can compare l[0] with next value
+                # if can move right: # account for end of list
+                if self.can_move_right() == True:
+                    # swap
+                    self.swap_item()
+                    # move right
+                    self.move_right()
+                    
+                    # if compare <= 0  # item smaller than current position item, put smaller item back where it was
+                    if self.compare_item() <= 0:
+                        # move left # back to where none is stored
+                        self.move_left()
+                        # swap # replace none with smaller of values just compared
+                        self.swap_item()
+                        # move right
+                        self.move_right()
+                        # light = on
+                        self.set_light_on()
+                        # repeat line 101
+                    # elif: compare == 1: # if its bigger, swap and put smaller one in previous spot
+                    else:
+                        # x swap
+                        self.swap_item()
+                        # x move left
+                        self.move_left()
+                        # x swap 
+                        self.swap_item()
+                        # x move right
+                        self.move_right()
+                        # light = on
+                        self.set_light_on()
+                # else:
+                else:
+                    # while can move left
+                    while self.can_move_left() == True:
+                        # move left # move back to first item
+                        self.move_left()
+        # return list
+        return self._list
 
-        # if self.can_move_left == False:
-        # self._item = l[0]
-        # if self.can_move_right():
-        #     self.move_right()
-        #     if self.compare_item() == -1:
-        #         self.swap_item()
-        
 
 
 
@@ -115,10 +153,10 @@ class SortingRobot:
 if __name__ == "__main__":
     # Test our your implementation from the command line
     # with `python robot_sort.py`
-
+   
     l = [15, 41, 58, 49, 26, 4, 28, 8, 61, 60, 65, 21, 78, 14, 35, 90, 54, 5, 0, 87, 82, 96, 43, 92, 62, 97, 69, 94, 99, 93, 76, 47, 2, 88, 51, 40, 95, 6, 23, 81, 30, 19, 25, 91, 18, 68, 71, 9, 66, 1, 45, 33, 3, 72, 16, 85, 27, 59, 64, 39, 32, 24, 38, 84, 44, 80, 11, 73, 42, 20, 10, 29, 22, 98, 17, 48, 52, 67, 53, 74, 77, 37, 63, 31, 7, 75, 36, 89, 70, 34, 79, 83, 13, 57, 86, 12, 56, 50, 55, 46]
 
     robot = SortingRobot(l)
 
-    robot.sort()
+    print(robot.sort())
     print(robot._list)

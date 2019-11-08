@@ -11,8 +11,14 @@ def count_th(word):
 # DON'T NEED RECURSION OR LOOPS, JUST USE REGEX ^^^
 # why would you ever use recursion for something like this?
 # seems like a lot of overcomplication
-    # count = 0
+    count = 0
     # ?
+    if word contains th
+    count += 1
+    word = [th:]
+    else:
+        count
+    count_th(word)
     
 
 
