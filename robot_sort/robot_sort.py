@@ -97,7 +97,19 @@ class SortingRobot:
         Sort the robot's list.
         """
         # Fill this out
-        pass
+
+        # my plan is to try and implement selection sort or bubble sort using all of the robot methods.
+        # since I can't use loops, I will need to recursively call the sort method once the robot has reached the end of the line
+
+        # if self.can_move_left == False:
+        # self._item = l[0]
+        # if self.can_move_right():
+        #     self.move_right()
+        #     if self.compare_item() == -1:
+        #         self.swap_item()
+        
+
+
 
 
 if __name__ == "__main__":
