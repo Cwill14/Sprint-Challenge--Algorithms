@@ -13,7 +13,8 @@ b)
 
 c)
     <!-- O(n) I think, because everything inside the recursion is an O(1)? -->
-    O(n^2) because there is recursion?
+    <!-- O(n^2) because there is recursion? -->
+    O(n), each recursion only increases the number of operations by 1. so the higher the number, the more operations
 
 ## Exercise II
 
