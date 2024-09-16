@@ -28,6 +28,21 @@ c)  def bunnyEars(bunnies):
 
       return 2 + bunnyEars(bunnies-1)
 ```
+bunnies = 4
+return 2 + bunnyEars(4 - 1)
+          bunnies = 3
+          return 2 + bunnyEars(3-1)
+              bunnies = 2
+                return 2 + bunnyEars(2-1)
+                    bunnies = 1
+                      return 2 + bunnyEars(1-1)
+                          return 0
+
+bunnies = 2 => 4, ops = 2? 
+bunnies = 3 => 6, ops =  3?
+bunnies = 4 => 8, ops = 4?
+
+O(n)
 
 ## Exercise II
 
